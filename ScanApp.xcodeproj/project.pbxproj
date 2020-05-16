@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,12 @@
 		964F0BB0246EEFB500CE4098 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964F0BAE246EEFB500CE4098 /* Main.storyboard */; };
 		964F0BB2246EEFBF00CE4098 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964F0BB1246EEFBF00CE4098 /* Assets.xcassets */; };
 		964F0BB5246EEFBF00CE4098 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964F0BB3246EEFBF00CE4098 /* LaunchScreen.storyboard */; };
+		96E67FCE246F811700162862 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E67FCD246F811700162862 /* CardViewController.swift */; };
+		DD2E376901C87DA9AE11F522 /* Pods_ScanApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C142ED5609E1C7D55AAB4038 /* Pods_ScanApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12D7E6FC3755787AC23E7CE9 /* Pods-ScanApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScanApp.debug.xcconfig"; path = "Target Support Files/Pods-ScanApp/Pods-ScanApp.debug.xcconfig"; sourceTree = "<group>"; };
 		964F0BA5246EEFB500CE4098 /* ScanApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScanApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		964F0BA8246EEFB500CE4098 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		964F0BAA246EEFB500CE4098 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		964F0BB1246EEFBF00CE4098 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		964F0BB4246EEFBF00CE4098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		964F0BB6246EEFBF00CE4098 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96E67FCD246F811700162862 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		C142ED5609E1C7D55AAB4038 /* Pods_ScanApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScanApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F65EA5769E2A432B0D3157DB /* Pods-ScanApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScanApp.release.xcconfig"; path = "Target Support Files/Pods-ScanApp/Pods-ScanApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD2E376901C87DA9AE11F522 /* Pods_ScanApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26FD9086A345232162158AF6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12D7E6FC3755787AC23E7CE9 /* Pods-ScanApp.debug.xcconfig */,
+				F65EA5769E2A432B0D3157DB /* Pods-ScanApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		964F0B9C246EEFB500CE4098 = {
 			isa = PBXGroup;
 			children = (
 				964F0BA7246EEFB500CE4098 /* ScanApp */,
 				964F0BA6246EEFB500CE4098 /* Products */,
+				26FD9086A345232162158AF6 /* Pods */,
+				E6B5ECA812CECBF21145C9CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +77,21 @@
 				964F0BA8246EEFB500CE4098 /* AppDelegate.swift */,
 				964F0BAA246EEFB500CE4098 /* SceneDelegate.swift */,
 				964F0BAC246EEFB500CE4098 /* ViewController.swift */,
+				96E67FCD246F811700162862 /* CardViewController.swift */,
 				964F0BAE246EEFB500CE4098 /* Main.storyboard */,
 				964F0BB1246EEFBF00CE4098 /* Assets.xcassets */,
 				964F0BB3246EEFBF00CE4098 /* LaunchScreen.storyboard */,
 				964F0BB6246EEFBF00CE4098 /* Info.plist */,
 			);
 			path = ScanApp;
+			sourceTree = "<group>";
+		};
+		E6B5ECA812CECBF21145C9CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C142ED5609E1C7D55AAB4038 /* Pods_ScanApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 964F0BB9246EEFBF00CE4098 /* Build configuration list for PBXNativeTarget "ScanApp" */;
 			buildPhases = (
+				7C1D8517BB7E97F8AC008082 /* [CP] Check Pods Manifest.lock */,
 				964F0BA1246EEFB500CE4098 /* Sources */,
 				964F0BA2246EEFB500CE4098 /* Frameworks */,
 				964F0BA3246EEFB500CE4098 /* Resources */,
+				C4EAE485EF9367C27539239B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,11 +162,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7C1D8517BB7E97F8AC008082 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScanApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4EAE485EF9367C27539239B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScanApp/Pods-ScanApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScanApp/Pods-ScanApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ScanApp/Pods-ScanApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		964F0BA1246EEFB500CE4098 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96E67FCE246F811700162862 /* CardViewController.swift in Sources */,
 				964F0BAD246EEFB500CE4098 /* ViewController.swift in Sources */,
 				964F0BA9246EEFB500CE4098 /* AppDelegate.swift in Sources */,
 				964F0BAB246EEFB500CE4098 /* SceneDelegate.swift in Sources */,
@@ -282,6 +354,7 @@
 		};
 		964F0BBA246EEFBF00CE4098 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12D7E6FC3755787AC23E7CE9 /* Pods-ScanApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -294,12 +367,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yoshihiro.ScanApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		964F0BBB246EEFBF00CE4098 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F65EA5769E2A432B0D3157DB /* Pods-ScanApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,7 +386,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yoshihiro.ScanApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
