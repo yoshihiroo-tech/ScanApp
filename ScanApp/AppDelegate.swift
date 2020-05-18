@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import LineSDK
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,8 +18,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        FirebaseApp.configure()
+        
+        //ラインログイン
+        LoginManager.shared.setup(channelID: "1654220580", universalLinkURL: nil)
+        
         return true
     }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return LoginManager.shared.application(app, open: url, options: options)
+    }
+    
 
     // MARK: UISceneSession Lifecycle
 

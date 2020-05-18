@@ -46,7 +46,7 @@
         <!--Card View Controller-->
         <scene sceneID="cPc-Sm-m8S">
             <objects>
-                <viewController id="8DP-YB-6BH" customClass="CardViewController" customModule="ScanApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cardVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8DP-YB-6BH" customClass="CardViewController" customModule="ScanApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X9e-gj-8zQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,23 +97,28 @@
                                 <rect key="frame" x="16" y="104" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ei-4v-Dis">
-                                <rect key="frame" x="118" y="104" width="140" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8AP-7L-zL4">
                                 <rect key="frame" x="266" y="104" width="93" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ei-4v-Dis">
+                                <rect key="frame" x="104" y="104" width="140" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="1gG-Jp-Sz1"/>
                     </view>
                     <navigationItem key="navigationItem" id="Moj-A7-P3T"/>
+                    <connections>
+                        <outlet property="displayNameLabel" destination="2Ei-4v-Dis" id="us0-al-MYc"/>
+                        <outlet property="myProfileImageView" destination="aau-Nq-2oq" id="Hgy-Hb-NzU"/>
+                        <outlet property="tableView" destination="xAs-6L-Y9F" id="N7R-GB-HV9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IKk-W8-lZA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,6 +14,9 @@
 		964F0BB2246EEFBF00CE4098 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964F0BB1246EEFBF00CE4098 /* Assets.xcassets */; };
 		964F0BB5246EEFBF00CE4098 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964F0BB3246EEFBF00CE4098 /* LaunchScreen.storyboard */; };
 		96E67FCE246F811700162862 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E67FCD246F811700162862 /* CardViewController.swift */; };
+		96E9E75F2472D51D00A98CA0 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E9E75E2472D51D00A98CA0 /* Element.swift */; };
+		96E9E7612472D53C00A98CA0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E9E7602472D53C00A98CA0 /* Post.swift */; };
+		96F6E880247026200048C13D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96F6E87F247026200048C13D /* GoogleService-Info.plist */; };
 		DD2E376901C87DA9AE11F522 /* Pods_ScanApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C142ED5609E1C7D55AAB4038 /* Pods_ScanApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +31,9 @@
 		964F0BB4246EEFBF00CE4098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		964F0BB6246EEFBF00CE4098 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96E67FCD246F811700162862 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		96E9E75E2472D51D00A98CA0 /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
+		96E9E7602472D53C00A98CA0 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		96F6E87F247026200048C13D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C142ED5609E1C7D55AAB4038 /* Pods_ScanApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScanApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F65EA5769E2A432B0D3157DB /* Pods-ScanApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScanApp.release.xcconfig"; path = "Target Support Files/Pods-ScanApp/Pods-ScanApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,10 +84,13 @@
 				964F0BAA246EEFB500CE4098 /* SceneDelegate.swift */,
 				964F0BAC246EEFB500CE4098 /* ViewController.swift */,
 				96E67FCD246F811700162862 /* CardViewController.swift */,
+				96E9E7602472D53C00A98CA0 /* Post.swift */,
+				96E9E75E2472D51D00A98CA0 /* Element.swift */,
 				964F0BAE246EEFB500CE4098 /* Main.storyboard */,
 				964F0BB1246EEFBF00CE4098 /* Assets.xcassets */,
 				964F0BB3246EEFBF00CE4098 /* LaunchScreen.storyboard */,
 				964F0BB6246EEFBF00CE4098 /* Info.plist */,
+				96F6E87F247026200048C13D /* GoogleService-Info.plist */,
 			);
 			path = ScanApp;
 			sourceTree = "<group>";
@@ -155,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				964F0BB5246EEFBF00CE4098 /* LaunchScreen.storyboard in Resources */,
+				96F6E880247026200048C13D /* GoogleService-Info.plist in Resources */,
 				964F0BB2246EEFBF00CE4098 /* Assets.xcassets in Resources */,
 				964F0BB0246EEFB500CE4098 /* Main.storyboard in Resources */,
 			);
@@ -212,7 +222,9 @@
 				96E67FCE246F811700162862 /* CardViewController.swift in Sources */,
 				964F0BAD246EEFB500CE4098 /* ViewController.swift in Sources */,
 				964F0BA9246EEFB500CE4098 /* AppDelegate.swift in Sources */,
+				96E9E7612472D53C00A98CA0 /* Post.swift in Sources */,
 				964F0BAB246EEFB500CE4098 /* SceneDelegate.swift in Sources */,
+				96E9E75F2472D51D00A98CA0 /* Element.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

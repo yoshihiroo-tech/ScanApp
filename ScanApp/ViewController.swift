@@ -60,20 +60,15 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
                     UserDefaults.standard.set(String(describing: profile.pictureURL), forKey: "pictureURLString")
                     
                     //画面遷移
+                    let cardVC = self.storyboard?.instantiateViewController(withIdentifier: "cardVC") as! CardViewController
+                    self.navigationController?.pushViewController(cardVC, animated: true)
             
                 }
                 
             case .failure(let error):
                 print(error)
             }
-            
         }
-        
-        
-        
     }
-    
-    
-    
 }
 
