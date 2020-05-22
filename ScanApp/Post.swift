@@ -9,5 +9,13 @@
 import UIKit
 
 class Post: NSObject {
-
+    
+    var userName:String = String()
+    var company:String = String()
+    var imageURL:String = String()
+    var memo:String = String()
+    var createDate:CLong = CLong()
+    
+    
+    
 }
