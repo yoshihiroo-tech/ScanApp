@@ -13,6 +13,8 @@
 		964F0BB0246EEFB500CE4098 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964F0BAE246EEFB500CE4098 /* Main.storyboard */; };
 		964F0BB2246EEFBF00CE4098 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 964F0BB1246EEFBF00CE4098 /* Assets.xcassets */; };
 		964F0BB5246EEFBF00CE4098 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964F0BB3246EEFBF00CE4098 /* LaunchScreen.storyboard */; };
+		966768652478EBF100794009 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966768642478EBF100794009 /* EditViewController.swift */; };
+		96DAF297247C0DC4007A6824 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DAF296247C0DC4007A6824 /* DetailViewController.swift */; };
 		96E67FCE246F811700162862 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E67FCD246F811700162862 /* CardViewController.swift */; };
 		96E9E75F2472D51D00A98CA0 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E9E75E2472D51D00A98CA0 /* Element.swift */; };
 		96E9E7612472D53C00A98CA0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E9E7602472D53C00A98CA0 /* Post.swift */; };
@@ -30,6 +32,8 @@
 		964F0BB1246EEFBF00CE4098 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		964F0BB4246EEFBF00CE4098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		964F0BB6246EEFBF00CE4098 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		966768642478EBF100794009 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		96DAF296247C0DC4007A6824 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		96E67FCD246F811700162862 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		96E9E75E2472D51D00A98CA0 /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
 		96E9E7602472D53C00A98CA0 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 				964F0BAA246EEFB500CE4098 /* SceneDelegate.swift */,
 				964F0BAC246EEFB500CE4098 /* ViewController.swift */,
 				96E67FCD246F811700162862 /* CardViewController.swift */,
+				966768642478EBF100794009 /* EditViewController.swift */,
+				96DAF296247C0DC4007A6824 /* DetailViewController.swift */,
 				96E9E7602472D53C00A98CA0 /* Post.swift */,
 				96E9E75E2472D51D00A98CA0 /* Element.swift */,
 				964F0BAE246EEFB500CE4098 /* Main.storyboard */,
@@ -225,6 +231,8 @@
 				96E9E7612472D53C00A98CA0 /* Post.swift in Sources */,
 				964F0BAB246EEFB500CE4098 /* SceneDelegate.swift in Sources */,
 				96E9E75F2472D51D00A98CA0 /* Element.swift in Sources */,
+				966768652478EBF100794009 /* EditViewController.swift in Sources */,
+				96DAF297247C0DC4007A6824 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

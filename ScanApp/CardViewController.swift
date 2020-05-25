@@ -9,9 +9,12 @@
 import UIKit
 import SDWebImage
 import Firebase
+import MBDocCapture
 
 
-class CardViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class CardViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,ImageScannerControllerDelegate {
+    
+    
    
     var displayName = String()
     var pictureURLString = String()
@@ -57,14 +60,14 @@ class CardViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     @objc func reflesh(){
         
-        
+        fetchData()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
+        fetchData()
         
     }
     
@@ -118,7 +121,8 @@ class CardViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
     }
     
-    //https://scanapp-66253.firebaseio.com/
+
+    
     //データをFirebaseから取ってくる
     func fetchData(){
         //データベースサーバーからpost(点、場所,自分で決める)というノードから最新100件を古い順に取ってくる
@@ -162,7 +166,38 @@ class CardViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     
     
+    @IBAction func openCamera(_ sender: Any) {
+        
+        let scanner = ImageScannerController(delegate:self)
+        scanner.shouldScanTwoFaces = false
+        present(scanner,animated: true)
+        
+        
+    }
     
     
-
+    func imageScannerController(_ scanner: ImageScannerController, didFinishScanningWithResults results: ImageScannerResults) {
+        
+        //値を保持して画面遷移
+        let editVC = self.storyboard?.instantiateViewController(withIdentifier: "edit") as! EditViewController
+        editVC.cardImage = results.scannedImage
+        self.navigationController?.pushViewController(editVC, animated: true)
+        
+    }
+    
+    func imageScannerController(_ scanner: ImageScannerController, didFinishScanningWithPage1Results page1Results: ImageScannerResults, andPage2Results page2Results: ImageScannerResults) {
+        
+    }
+    
+    func imageScannerControllerDidCancel(_ scanner: ImageScannerController) {
+        
+        scanner.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    func imageScannerController(_ scanner: ImageScannerController, didFailWithError error: Error) {
+        
+        scanner.dismiss(animated: true, completion: nil)
+        
+    }
 }
