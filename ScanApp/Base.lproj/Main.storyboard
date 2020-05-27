@@ -101,6 +101,9 @@
                                 <rect key="frame" x="266" y="104" width="93" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="toSettingView:" destination="8DP-YB-6BH" eventType="touchUpInside" id="IEP-VF-bSu"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ei-4v-Dis">
                                 <rect key="frame" x="104" y="104" width="140" height="80"/>
@@ -128,6 +131,7 @@
                         <outlet property="tableView" destination="xAs-6L-Y9F" id="N7R-GB-HV9"/>
                         <segue destination="UW3-RN-pjY" kind="show" id="uCX-0m-ZXz"/>
                         <segue destination="NYZ-GL-f4d" kind="show" id="VW4-EQ-t7e"/>
+                        <segue destination="sgC-uS-o82" kind="show" id="Kkc-HB-NZK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IKk-W8-lZA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -137,7 +141,7 @@
         <!--Detail View Controller-->
         <scene sceneID="VKs-N6-zq6">
             <objects>
-                <viewController id="NYZ-GL-f4d" customClass="DetailViewController" customModule="ScanApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NYZ-GL-f4d" customClass="DetailViewController" customModule="ScanApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Doi-hz-OMM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,10 +211,60 @@
                         <viewLayoutGuide key="safeArea" id="MwG-Uu-tQt"/>
                     </view>
                     <navigationItem key="navigationItem" id="j7Y-dn-rhQ"/>
+                    <connections>
+                        <outlet property="companyLabel" destination="CjI-W2-10R" id="f7v-gV-P84"/>
+                        <outlet property="dateLabel" destination="Iig-60-7Cg" id="lmo-Nn-35C"/>
+                        <outlet property="imageView" destination="bbB-F3-GNB" id="Jsf-94-tqZ"/>
+                        <outlet property="memoLabel" destination="atw-FK-f0O" id="OLZ-u9-o6g"/>
+                        <outlet property="nameLabel" destination="BlD-7V-geZ" id="wVS-GU-8gd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zjv-0Z-xiS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="913" y="747"/>
+        </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="1WU-xd-Thp">
+            <objects>
+                <viewController storyboardIdentifier="setting" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sgC-uS-o82" customClass="SettingViewController" customModule="ScanApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sKv-VD-3aL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RCF-qL-kTg">
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPB-Io-YKr">
+                                <rect key="frame" x="252" y="144" width="123" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="openCamera:" destination="sgC-uS-o82" eventType="touchUpInside" id="aEb-ra-XVj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHn-Sn-tpZ">
+                                <rect key="frame" x="0.0" y="512" width="149" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="openAlbum:" destination="sgC-uS-o82" eventType="touchUpInside" id="DQM-r7-Ze9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="M6B-5R-dPy"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nS6-JZ-rBw"/>
+                    <connections>
+                        <outlet property="album" destination="FHn-Sn-tpZ" id="L8c-ru-bRb"/>
+                        <outlet property="camera" destination="zPB-Io-YKr" id="yde-ZA-o3q"/>
+                        <outlet property="imageView" destination="RCF-qL-kTg" id="KCd-5C-fQ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eOx-UD-HnN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1637.5999999999999" y="745.56650246305423"/>
         </scene>
         <!--Edit View Controller-->
         <scene sceneID="Z6r-H8-4aq">

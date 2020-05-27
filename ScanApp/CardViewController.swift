@@ -15,7 +15,6 @@ import MBDocCapture
 class CardViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,ImageScannerControllerDelegate {
     
     
-   
     var displayName = String()
     var pictureURLString = String()
     let refleshControl = UIRefreshControl()
@@ -27,9 +26,9 @@ class CardViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     //Element型の配列を準備
     weak var element:Element?
     var listOfData = [Element]()
-    
     //カード
     var cardImageView = UIImageView()
+    
     
     
     override func viewDidLoad() {
@@ -58,11 +57,13 @@ class CardViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
     }
     
+    
     @objc func reflesh(){
         
         fetchData()
         
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -148,21 +149,38 @@ class CardViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                         }
                         
                         self.listOfData.append(Element(userName: userName!, company: company!, imageString: imageString!, memo: memo!, createAt: postDate!))
-                        
                     }
                 }
                 
                 self.tableView.reloadData()
                 
-                
             }
-            
-            
-            
-            
         }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        //画面遷移（値を渡しながら)
+        let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "detail") as! DetailViewController
+        
+        detailVC.nameString = listOfData[indexPath.row].userName!
+        detailVC.companyString = listOfData[indexPath.row].company!
+        detailVC.memoString = listOfData[indexPath.row].memo!
+        detailVC.cardImage = listOfData[indexPath.row].imageString!
+        
+        //日付については数字の羅列を変換する必要がある
+        let dateUnix = Double(listOfData[indexPath.row].createAt!) as! TimeInterval
+        let date = Date(timeIntervalSince1970: dateUnix/1000)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        let dateStr = formatter.string(from: date)
+        detailVC.dateString = dateStr
+        
+        self.navigationController?.pushViewController(detailVC, animated: true)
         
     }
+    
     
     
     
@@ -200,4 +218,17 @@ class CardViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         scanner.dismiss(animated: true, completion: nil)
         
     }
+    
+    
+    @IBAction func toSettingView(_ sender: Any) {
+        
+        let settingVC = self.storyboard?.instantiateViewController(withIdentifier: "setting") as! SettingViewController
+        self.navigationController?.pushViewController(settingVC, animated: true)
+        
+    }
+    
+    
+    
+    
+    
 }
